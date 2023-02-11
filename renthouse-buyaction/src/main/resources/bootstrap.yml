@@ -1,0 +1,13 @@
+server:
+  port: 9008
+spring:
+  application:
+    name: renthouse-buyaction
+#  profiles:
+#    active: buyQueue,itemCacheName,redis,rabbit
+  cloud:
+    config:
+      uri: http://localhost:9010
+      label: master
+      name: renthouse
+      profile: dev

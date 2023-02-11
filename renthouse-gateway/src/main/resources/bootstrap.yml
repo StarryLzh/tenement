@@ -1,0 +1,31 @@
+server:
+  port: 4006
+spring:
+  application:
+    name: renthouse-gateway
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: false 	#不开启服务注册和发现的功能，使用了eureka
+          lower-case-service-id: true #请求路径上的服务名称转换为小写
+      #断言如果断言为true则匹配该路由
+      routes:
+        - id: banner
+          uri: lb://renthouse-banner
+          predicates:
+            - Path=/banner
+#        - id: hotproduct
+#          uri: lb://renthouse-hot-product
+#          predicates:
+#            - Paht=/hotproduct
+#            - Query=city #请求中，必须包含city请求参数。参数内容不限。
+#        - id: recommendation
+#          uri: lb://renthouse-recommendation
+#          predicates:
+#            - Paht=/recommendation
+    config:
+      uri: http://localhost:9010
+      label: master
+      name: renthouse
+      profile: dev

@@ -1,0 +1,23 @@
+server:
+  port: 9000
+spring:
+  application:
+    name: renthouse-banner
+  #数据库的模块
+  profiles:
+    active: mongodb  #bannerNginx,此处添加rabbit配置，目的是自动刷新configServer的配置
+  #配置中心参数
+  #需要从配置中心里面
+  #拿取注册中心eureka的地址和端口号
+  cloud:
+    config:
+      uri: http://localhost:9010
+      label: master
+      name: renthouse
+      profile: dev
+#暴露健康检查端口
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="renthouse-search" />
+        <module name="renthouse-order" />
+        <module name="rentHouse_eureka" />
+        <module name="renthouse-hot-product" />
+        <module name="renthouse-buytime" />
+        <module name="renthouse-config-server" />
+        <module name="renthouse-detail" />
+        <module name="renthouse-buyaction-message-consumer" />
+        <module name="renthouse-comment" />
+        <module name="renthouse-login" />
+        <module name="renthouse-cache-redis" />
+        <module name="renthouse-banner" />
+        <module name="renthouse-rabbit-publisher" />
+        <module name="renthouse-buyaction" />
+        <module name="renthouse-commons" />
+        <module name="renthouse-recommendation" />
+        <module name="renthouse-gateway" />
+        <module name="renthouse-mongodb-dao" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="rentHose_eureka" target="11" />
+      <module name="rentHouse_banner" target="11" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

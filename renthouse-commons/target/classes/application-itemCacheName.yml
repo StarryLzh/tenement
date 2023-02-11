@@ -1,0 +1,6 @@
+renthouse:
+  cache:
+    names:
+      item:
+        prefix: com:renthouse:details
+        suffix: getDetails

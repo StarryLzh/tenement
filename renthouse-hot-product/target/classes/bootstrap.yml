@@ -1,0 +1,14 @@
+server:
+  port: 9001
+spring:
+  application:
+    name: renthouse-hot-product
+  #mongodb和nginx的配置文件
+  profiles:
+    active: mongodb,bannerNginx
+  cloud:
+    config:
+      uri: http://localhost:9010
+      label: master
+      name: renthouse
+      profile: dev

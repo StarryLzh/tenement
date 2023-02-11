@@ -1,0 +1,20 @@
+server:
+  port: 9010
+spring:
+  application:
+    name: renthouse-config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://gitee.com/LzhLikeStudy/house-lzh
+          search-paths:
+            - renthouse
+      label: master
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://192.168.66.123:8761/eureka/
+  instance:
+    prefer-ip-address: true

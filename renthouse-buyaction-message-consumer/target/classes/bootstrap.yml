@@ -1,0 +1,20 @@
+#此模块不面向端口访问，所以不需要设置端口号
+spring:
+  application:
+    name: renthouse-message-consumer
+#  profiles:
+#    active: itemCacheName,buyQueue,mongodb,redis
+  cloud:
+    config:
+      uri: http://localhost:9010
+      label: master
+      name: rabbit
+      profile: dev
+#    stream:
+#      bindings:
+#        livegoodsMessenger-in-0:
+#          destination: livegoodsTopic # 对应的真实的 RabbitMQ Exchange
+#        livegoodsMessenger-out-0:
+#          destination: livegoodsTopic
+#      function:
+#        definition: livegoodsMessenger

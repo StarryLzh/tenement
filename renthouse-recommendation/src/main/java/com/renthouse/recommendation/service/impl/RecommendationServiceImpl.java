@@ -27,7 +27,7 @@ public class RecommendationServiceImpl implements RecommendationService {
     /**
      * 前缀
      */
-    @Value("${livegoods.banner.nginx.prefix}")
+    @Value("${renthouse.banner.nginx.prefix}")
     private String nginxPrefix;
 
     @Override

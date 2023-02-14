@@ -11,3 +11,7 @@ spring:
       label: master
       name: renthouse
       profile: dev
+
+logging:
+  pattern:
+    console: '%d{MM/dd HH:mm:ss.SSS} %clr(%-5level) ---  [%-15thread] %cyan(%-50logger{50}):%msg%n'

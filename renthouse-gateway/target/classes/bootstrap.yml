@@ -15,15 +15,16 @@ spring:
           uri: lb://renthouse-banner
           predicates:
             - Path=/banner
-#        - id: hotproduct
-#          uri: lb://renthouse-hot-product
-#          predicates:
-#            - Paht=/hotproduct
-#            - Query=city #请求中，必须包含city请求参数。参数内容不限。
-#        - id: recommendation
-#          uri: lb://renthouse-recommendation
-#          predicates:
-#            - Paht=/recommendation
+        - id: hotproduct #完成网关模块后添加的
+          uri: lb://renthouse-hot-product #应用名称
+          predicates: #断言 参考banner
+            - Path=/hotProduct
+            - Query=city  #请求中，必须包含city请求参数。参数内容不限。
+        - id: recommendation
+          uri: lb://renthouse-recommendation
+          predicates:
+            - Path=/recommendation
+            - Query=city
     config:
       uri: http://localhost:9010
       label: master

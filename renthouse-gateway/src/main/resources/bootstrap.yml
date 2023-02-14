@@ -25,6 +25,11 @@ spring:
           predicates:
             - Path=/recommendation
             - Query=city
+        - id: details
+          uri: lb://renthouse-details
+          predicates:
+            - Path=/details
+            - Query=id
     config:
       uri: http://localhost:9010
       label: master
